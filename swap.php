@@ -9,3 +9,16 @@ function swap($string, $pos, $place) {
         echo "Invalid Request";
     }
 }
+
+swap("Computer", 1,4);
+function swap($string, $pos, $place) {
+    $arrstring = str_split($string);
+    if(array_key_exists($pos, $arrstring) && array_key_exists($place, $arrstring)) {
+        $temp = $arrstring[$place];
+        $arrstring[$place] = $arrstring[$pos];
+        $arrstring[$pos]= $temp;
+        echo implode("", $arrstring);
+    } else {
+        echo "Invalid Request";
+    }
+}
